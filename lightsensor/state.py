@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 from time import sleep
-from termcolor import import colored
+from termcolor import colored
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4,GPIO.IN)
