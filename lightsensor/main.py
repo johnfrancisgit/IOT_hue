@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from phue import Bridge
-from main import Sensor
+from state import Sensor
 
 b = Bridge('tobedefined')
 b.connect()
@@ -13,7 +13,7 @@ try:
     while True:
         light = Sensor.get_status(debug)
         if old_light != light:
-            if !Sensor.get_status(debug):
+            if not Sensor.get_status(debug):
                 command =  {'transitiontime' : 50, 'on' : True, 'bri' : 254}
                 b.set_light(1, command)
             else:
